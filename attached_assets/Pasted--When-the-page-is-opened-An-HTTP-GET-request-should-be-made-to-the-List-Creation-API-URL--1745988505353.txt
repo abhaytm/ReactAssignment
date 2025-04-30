@@ -1,0 +1,16 @@
+- When the page is opened,
+    - An HTTP GET request should be made to the **List Creation API URL**.
+        - ***Loader*** should be displayed while fetching the data.
+        - After the data is fetched successfully, then the list items should be displayed in the respective list container based on the `list_number` received from the response.
+        - If the HTTP GET request made is unsuccessful, then the [Failure View](https://assets.ccbp.in/frontend/content/react-js/list-creation-failure-lg-output.png) should be displayed.
+            - When the **Try Again** button is clicked, an HTTP GET request should be made to the **List Creation API URL**.
+    - When exactly two list containers are not checked and the **Create a new list** button is clicked, then the error message **You should select exactly 2 lists to create a new list** should be displayed
+    - When the exactly two list containers are checked and clicked the **Create a new list** button,
+        - `List Creation` view should be displayed
+        - In `List Creation` view, a new empty list container should be displayed in between the two checked list containers.
+        - When the right arrow image of the list item in the first list container is clicked, then the respective list item should be moved to the new list container.
+        - When the left arrow image of the list item in the second list container is clicked, then the respective list item should be moved to the new list container.
+        - When the right arrow image of the list item in the new list container is clicked, then the respective list item should be moved to the second list container.
+        - When the left arrow image of the list item in the new list container is clicked, then the respective list item should be moved to the first list container.
+        - When the **Cancel** button is clicked in `List Creation` view, then all the changes should be cancelled and the `All Lists` view should be displayed.
+        - When the **Update** button is clicked in `List Creation` view, then the `All Lists` view should be displayed with the updated list containers.

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Animal List Creation</title>
+    <meta name="description" content="Create and manage custom animal lists" />
+    <!-- Add favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwZTdmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1wYXdwcmludCI+PHBhdGggZD0iTTMgMTJjMy41IDAgNi41LTMgNi41LTRzLTMtMy42LTYuNSAwLTYuNSA0IDAgNC41Ii8+PHBhdGggZD0iTTkgMThjMy41IDAgNi41LTMgNi41LTRzLTMtMy42LTYuNSAwLTYuNSA0IDAgNC41Ii8+PHBhdGggZD0iTTE0LjggOWMzLjUgMCA2LjUtMyA2LjUtNHMtMy0zLjYtNi41IDAtNi41IDQgMCA0LjUiLz+PHBhdGggZD0iTTIxIDE1YzMuNSAwIDYuNS0zIDYuNS00cy0zLTMuNi02LjUgMC02LjUgNCAwIDQuNSIvPjwvc3ZnPg==" />
+    <style>
+      /* Add some basic styles to ensure the page looks good even before React loads */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+      .loading-spinner {
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-left-color: #0e7fff;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Show loading spinner until React loads -->
+      <div class="loading">
+        <div class="loading-spinner"></div>
+        <p>Loading Animal List Creation App...</p>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
+    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
+  </body>
+</html>
